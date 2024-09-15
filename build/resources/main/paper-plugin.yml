@@ -1,0 +1,4 @@
+name: ToDoLister
+version: '1.0-SNAPSHOT'
+main: org.minerail.toDoLister.ToDoLister
+api-version: '1.21'
