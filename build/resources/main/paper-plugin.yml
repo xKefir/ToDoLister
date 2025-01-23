@@ -1,4 +1,10 @@
 name: ToDoLister
 version: '1.0-SNAPSHOT'
-main: org.minerail.toDoLister.ToDoLister
+main: org.minerail.ToDoLister.ToDoLister
 api-version: '1.21'
+
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: true
