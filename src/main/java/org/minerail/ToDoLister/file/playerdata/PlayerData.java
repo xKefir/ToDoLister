@@ -4,10 +4,10 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.minerail.ToDoLister.ToDoLister;
 import org.minerail.ToDoLister.task.Task;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class PlayerData extends Profile {
@@ -48,7 +48,16 @@ public class PlayerData extends Profile {
     public void addTask(Task task) {
         List<String> taskNames = config.getStringList("tasks");
         taskNames.add(task.getName());
-        config.set("tasks", taskNames);
+        config.set("tasks." + task.getOptions().getTaskID(), Map.of(
+                "name", task.getName(),
+                "completed", task.isCompleted(),
+                "description", task.getOptions().getTaskDescription(),
+                "type", task.getOptions().getTaskType(),
+                "difficulty", task.getOptions().getTaskDifficulty(),
+                "priority", task.getOptions().getTaskPriority(),
+                "createdAt", task.getOptions().getCreatedAt(),
+                "location", task.getOptions().getTaskLocation()
+        ));
     }
 
     public void removeTask(Task task) {

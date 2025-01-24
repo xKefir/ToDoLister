@@ -1,12 +1,10 @@
 package org.minerail.ToDoLister.event;
 
-
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.minerail.ToDoLister.file.playerdata.PlayerData;
 import org.minerail.ToDoLister.file.playerdata.PlayerDataRegistry;
-
 import java.util.UUID;
 
 public class EventListener implements Listener {

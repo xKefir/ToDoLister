@@ -1,7 +1,47 @@
 Settings:
   Plugin:
+    Locale: #Soon
+
 
 
   Gui:
-    Main-Menu:
-    Settings-Menu:
+    Default-buttons:
+      exit:
+        material: "BARRIER"
+        name: "<messages.exit-button>"
+      confirm:
+        material: "LIME_TERRACOTTA"
+        name: "<messages.confirm-button>"
+      cancel:
+        material: "BARRIER"
+        name: "<messages.cancel-button>"
+      create-task:
+        material: "LIME_TERRACOTTA"
+        name: "<messages.create-button>"
+      delete-task:
+        material: "RED_TERRACOTTA"
+        name: "<messages.delete-button>"
+      next-page:
+        material: "PAPER"
+        name: "<messages.next-button>"
+      previous-page:
+        material: "PAPER"
+        name: "<messages.previous-button>"
+    Main:
+      style:
+        fill-type: "FRAME"
+        material: "GRAY_STAINED_GLASS_PANE"
+      buttons:
+        admin-settings:
+          material: "OCHRE_FROGLIGHT"
+          name: "<messages.mainGui-admin-settings-button>"
+        show-list:
+          material: "ENDER_PEARL"
+          name: "<messages.mainGui-show-list-button>"
+        preferences:
+          material: "COMPARATOR"
+          name: "<messages.mainGui-preferences-button>"
+    Task-Selector:
+        style:
+          fill-type: "FRAME"
+          material: "GRAY_STAINED_GLASS_PANE"

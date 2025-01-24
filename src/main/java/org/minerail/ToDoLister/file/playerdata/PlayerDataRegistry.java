@@ -1,5 +1,7 @@
 package org.minerail.ToDoLister.file.playerdata;
 
+import org.minerail.ToDoLister.ToDoLister;
+
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -13,5 +15,6 @@ public class PlayerDataRegistry {
 
     public static void saveAll() {
         PLAYER_DATA_MAP.values().forEach(PlayerData::save);
+        ToDoLister.get().getLogger().info("Saved PlayerData.");
     }
 }

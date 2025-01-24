@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextFormatUtil {
-
+    //Single message
     public static Component format(String input, TagResolver... resolvers) {
         if (MessageProviderLoader.getLoader().get(MessageKey.MESSAGES_INPUT_TYPE.getPath()).equals("LEGACY")) {
             return LegacyComponentSerializer.legacyAmpersand().deserialize(
@@ -21,6 +21,8 @@ public class TextFormatUtil {
         }
         return MiniMessage.miniMessage().deserialize(input, resolvers);
     }
+
+    //Lore
     public static List<Component> format(List<String> input, TagResolver... resolvers) {
         List<Component> formattedComponent = new ArrayList<>();
         input.forEach(str -> {
@@ -30,6 +32,7 @@ public class TextFormatUtil {
         return formattedComponent;
     }
 
+
     public static List<String> serialize(List<Component> input) {
         List<String> serializedText = new ArrayList<>();
         for (Component text : input) {
@@ -38,6 +41,7 @@ public class TextFormatUtil {
         return serializedText;
     }
 
+    //Serialize to default single text with color codes
     public static String serialize(Component input) {
         return GsonComponentSerializer.gson().serialize(input);
     }

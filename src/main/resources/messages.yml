@@ -1,4 +1,19 @@
 Messages:
   #Types: MINIMESSAGE, LEGACY
   Input-Type: 'LEGACY'
-  prefix: ''
+  prefix: '&8[&2ToDoLister&8]&r'
+
+  Task-options:
+    priority:
+      LOW: "Niski"
+      MEDIUM: "Umiarkowany"
+      HIGH: "Wysoki"
+      EXTREME: "Pilne!"
+
+
+  Exceptions:
+    missing-permission: "<prefix> &cBrak uprawnień! Potrzebujesz: &e<permission>"
+  Command:
+    reload:
+      success: "<prefix> &aPlugin został przeładowany!"
+      failed: "<prefix> &cWystąpił błąd, sprawdź konsole!"
